@@ -1,1 +1,49 @@
-/* Add your own styles */
+header{
+    background-color: rgb(8, 23, 88);
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -15px;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+img{
+    width: 90px;
+    border-radius: 50%;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+html{
+    background-color:rgb(26, 136, 238);
+}
+h1{
+    font-size:40px;
+    color: white;
+}
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+#top{
+    justify-content: center;
+    display: flex;
+}
+#country{
+    margin-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    display: flexbox;
+    width: 73%;
+    height: 30px;
+    
+}
+#lookup{
+    margin-top:25px;
+    background-color:gray;
+    height: 31px;
+    width: 70px;
+    border: none;
+    color:white;
+    font-size: 18px;
+    border-radius: 5px;
+}
