@@ -13,9 +13,6 @@ img{
     margin-top:10px;
     margin-bottom: 10px;
 }
-html{
-    background-color:rgb(26, 136, 238);
-}
 h1{
     font-size:40px;
     color: white;
@@ -34,8 +31,7 @@ label{
     font-size: 20px;
     display: flexbox;
     width: 73%;
-    height: 30px;
-    
+    height: 30px;   
 }
 #lookup{
     margin-top:25px;
@@ -46,4 +42,32 @@ label{
     color:white;
     font-size: 18px;
     border-radius: 5px;
+}
+caption{
+    padding-top:10px;
+    color:white;
+    font-size:20px;
+    background: #395870;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 25px auto;
+}
+thead {
+    background: #395870;
+    color: white;
+    border: 1px solid black;
+}
+th{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+td {
+    padding: 15px;
+    border: 1px solid black;
 }
