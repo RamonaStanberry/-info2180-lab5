@@ -4,29 +4,20 @@ $username = 'lab5_user';
 $password = 'password123';
 $dbname = 'world';
 $country= $_GET['country'];
+$context=$_GET['context'];
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-$stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if($context=='cities'){
+  $stmt= $conn->query("SELECT cities.name,cities.district, cities.population FROM cities JOIN countries ON cities.country_code=countries.code WHERE countries.name LIKE '%$country%';");
+  $city_results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  
+}
+elseif(isset($country)){
+  $stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%';");
+  $cntry_results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+require 'hello.php';
+
 ?>
-<br>
-<table>
-  <caption>List of Countries </caption>
-  <thead>
-    <tr>
-    <th>Name</th>
-      <th>Continent</th>
-      <th>Independence</th>
-      <th>Head of State </th>
-    </tr>
-  </thead>  
-  <tbody>
-<?php foreach ($results as $row): ?>
-  <tr>
-    <td><?= $row['name']; ?></td>
-    <td><?= $row['continent']; ?></td>
-    <td><?= $row['independence_year']; ?></td>
-    <td><?= $row['head_of_state']; ?> </td>
-  </tr>
-<?php endforeach; ?>
-</tbody>
-</table>

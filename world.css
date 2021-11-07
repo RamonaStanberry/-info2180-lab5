@@ -18,6 +18,7 @@ h1{
     color: white;
 }
 label{
+    margin-left:10%;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
@@ -26,6 +27,7 @@ label{
     display: flex;
 }
 #country{
+    /* margin-left:50px ; */
     margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -33,16 +35,30 @@ label{
     width: 73%;
     height: 30px;   
 }
-#lookup{
-    margin-top:25px;
+button{
+    display: inline-block;
+    vertical-align: middle;
+}
+#country_lookup{
+    margin-top:5px;
+    margin-left:33%;
     background-color:gray;
-    height: 31px;
-    width: 70px;
+    height: 25px;
     border: none;
     color:white;
-    font-size: 18px;
+    font-size: 18px; 
     border-radius: 5px;
 }
+#city_lookup{
+    margin-top:5px;
+    background-color:gray;
+    height: 25px;
+    border: none;
+    color:white;
+    font-size: 18px; 
+    border-radius: 5px;
+} 
+
 caption{
     padding-top:10px;
     color:white;
